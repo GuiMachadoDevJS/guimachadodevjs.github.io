@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CRCY2P5FTY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-CRCY2P5FTY');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Guilherme Pelegrino — desenvolvedor de sites e sistemas web em Guarulhos, SP. 6 anos de experiência, nota 5.0 no 99freelas. Do site simples ao sistema completo. Solicite um orçamento.">
+  <meta name="keywords"
+    content="desenvolvedor freelance Guarulhos, criação de sites São Paulo, sistema web, desenvolvedor PHP, Node.js, desenvolvedor full stack SP">
+  <meta name="author" content="Guilherme Pelegrino">
+  <title>Guilherme Pelegrino | Desenvolvedor de Sites e Sistemas — Guarulhos, SP</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%233b82f6'/><text x='50%25' y='54%25' font-family='Arial' font-weight='bold' font-size='11' fill='white' text-anchor='middle' dominant-baseline='middle'>GMP</text></svg>">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://guimachadodevjs.github.io">
+  <meta property="og:title" content="Guilherme Pelegrino | Desenvolvedor de Sites e Sistemas — Guarulhos, SP">
+  <meta property="og:description"
+    content="Dev Full Stack com 6 anos de experiência. Sites, sistemas e dashboards — do início ao fim, sem intermediários. Nota 5.0 no 99freelas.">
+  <meta property="og:image" content="https://guimachadodevjs.github.io/assets/img/og-image.png">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Guilherme Pelegrino | Dev Full Stack — Guarulhos, SP">
+  <meta name="twitter:description"
+    content="Sites, sistemas e dashboards. 6 anos de experiência, nota 5.0 no 99freelas.">
+  <meta name="twitter:image" content="https://guimachadodevjs.github.io/assets/img/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="apple-touch-icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%233b82f6'/><text x='50%25' y='54%25' font-family='Arial' font-weight='bold' font-size='11' fill='white' text-anchor='middle' dominant-baseline='middle'>GMP</text></svg>">
+</head>
+
+<body>
+
+  <!-- barra de progresso -->
+  <div id="read-progress"></div>
+
+  <!-- cursores -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ══ NAV ══ -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo" title="GMP = Guilherme Machado Pelegrino"><span>GMP</span>Dev</a>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#precos">Preços</a></li>
+      <li><a href="#depoimentos">Avaliações</a></li>
+      <li><a href="#contato" class="nav-cta">Contato</a></li>
+    </ul>
+    <div class="nav-right">
+      <!-- <button class="btn-recruiter" id="recruiterBtn" title="Modo Recrutador"><i class="fas fa-briefcase"></i>
+        Recrutador</button> -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema"><i class="fas fa-sun"></i></button>
+      <button class="nav-mobile-btn" id="mobileBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#sobre" onclick="closeMobile()">Sobre</a>
+    <a href="#timeline" onclick="closeMobile()">Trajetória</a>
+    <a href="#projetos" onclick="closeMobile()">Projetos</a>
+    <a href="#processo" onclick="closeMobile()">Processo</a>
+    <a href="#depoimentos" onclick="closeMobile()">Avaliações</a>
+    <a href="#faq" onclick="closeMobile()">FAQ</a>
+    <a href="#contato" onclick="closeMobile()">Contato</a>
+  </div>
+
+  <!-- ══ BANNER RECRUITER ══ -->
+  <div class="recruiter-banner" id="recruiterBanner" style="display:none">
+    <i class="fas fa-briefcase"></i>
+    <span>Modo Recrutador ativo — exibindo stack técnica, sistemas gov e experiência profissional</span>
+    <button onclick="exitRecruiter()"><i class="fas fa-times"></i> Sair</button>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">Disponível para novos projetos</div>
+        <h1 class="hero-title">Guilherme<br><span class="line2">Pelegrino</span></h1>
+        <div class="hero-typing-wrap">
+          <span class="hero-typing-prompt">$&gt;</span>
+          <span id="hero-typed"></span>
+          <span class="cursor-blink"></span>
+        </div>
+        <p class="hero-sub">
+          <strong>Desenvolvedor Full Stack com 6 anos de experiência.</strong>
+          Construo sistemas web completos — do login ao painel administrativo.
+          Código limpo, escalável e entregue no prazo.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projetos" class="btn-primary"><i class="fas fa-code"></i> Ver Projetos</a>
+          <button class="btn-ghost" onclick="openOrcamento()"><i class="fas fa-file-invoice"></i> Solicitar
+            Orçamento</button>
+        </div>
+        <div class="hero-time-badge">
+          <div class="time-dot"></div>
+          <span id="live-time">carregando...</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card reveal">
+          <div class="hero-card-label">// estatísticas</div>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-num" data-target="6" data-suffix="+">6<span>+</span></div>
+              <div class="stat-label">Anos dev</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" data-target="5" data-suffix="★">5<span>★</span></div>
+              <div class="stat-label">Nota 99freelas</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" data-target="30" data-suffix="+">30<span>+</span></div>
+              <div class="stat-label">Projetos</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card reveal">
+          <div class="hero-card-label">// stack principal</div>
+          <div class="tech-stack">
+            <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3/Sass</span>
+            <span class="tech-tag">JavaScript</span><span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">React</span><span class="tech-tag">Next.js</span>
+            <span class="tech-tag">Node.js</span><span class="tech-tag">PHP</span>
+            <span class="tech-tag">PostgreSQL</span><span class="tech-tag">REST API</span>
+            <span class="tech-tag">Git</span><span class="tech-tag">IA / LLMs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ CÓDIGO AO VIVO ══ -->
+  <section id="codigo-vivo">
+    <div class="container">
+      <div class="codevivo-grid">
+        <div class="codevivo-info reveal">
+          <div class="section-eyebrow">// olá, visitante</div>
+          <h2 class="section-title">Bem-vindo ao<br>portfólio.</h2>
+          <p class="section-desc">Está procurando um dev que entrega de verdade? Você chegou no lugar certo — sem
+            enrolação, do início ao fim.</p>
+          <div class="codevivo-badges">
+            <span class="codevivo-badge"><i class="fas fa-handshake" style="color:#10b981"></i> Do início ao fim</span>
+            <span class="codevivo-badge"><i class="fab fa-whatsapp" style="color:#25d366"></i> Sem intermediários</span>
+            <span class="codevivo-badge"><i class="fas fa-clock"></i> Resposta em até 24h</span>
+          </div>
+        </div>
+        <div class="codevivo-terminal reveal">
+          <div class="terminal-bar">
+            <span class="tb-dot" style="background:#ff5f57"></span>
+            <span class="tb-dot" style="background:#febc2e"></span>
+            <span class="tb-dot" style="background:#28c840"></span>
+            <span class="tb-file">portfolio.js — GMPDev · Guilherme Pelegrino</span>
+          </div>
+          <div class="terminal-body">
+            <pre class="code-display" id="codeDisplay"></pre>
+            <span class="code-cursor"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ SOBRE ══ -->
+  <section id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-left reveal">
+          <div class="sobre-photo-wrap">
+            <div class="sobre-photo-frame">
+              <img src="assets/img/foto-guilherme.png" alt="Guilherme Pelegrino" class="sobre-photo-real">
+              <div class="sobre-photo-glow"></div>
+            </div>
+            <div class="sobre-photo-deco sobre-photo-deco-1"></div>
+            <div class="sobre-photo-deco sobre-photo-deco-2"></div>
+          </div>
+        </div>
+        <div class="sobre-right reveal">
+          <div class="section-eyebrow">// sobre mim</div>
+          <h2 class="sobre-heading">Sistemas reais.<br>Resultados reais.</h2>
+          <p class="sobre-text">
+            Me chamo <strong>Guilherme Machado Pelegrino</strong>, desenvolvedor Full Stack com 6 anos de experiência,
+            residente em São Paulo. Sou responsável pelos sistemas usados por
+            <strong>300+ agentes de segurança pública</strong> da Prefeitura de Guarulhos — software crítico,
+            em produção, com zero tolerância a falhas.
+          </p>
+
+          <p class="sobre-text">
+            Paralelamente, atuo como freelancer, conduzindo projetos do início ao fim — da conversa inicial à publicação
+            —
+            sem intermediários. Isso garante uma comunicação direta, mais agilidade no processo e maior alinhamento
+            com as necessidades do cliente.
+          </p>
+
+          <p class="sobre-text">
+            Atualmente curso <strong>Ciência da Computação</strong>, possuo inglês funcional e utilizo
+            <strong>Inteligência Artificial</strong> como aliada no fluxo de desenvolvimento, otimizando tempo,
+            reduzindo retrabalho e elevando a qualidade das entregas.
+          </p>
+          <div class="sobre-highlights">
+            <div class="hl-item">
+              <div class="hl-icon"><i class="fas fa-shield-halved"></i></div>
+              <div class="hl-text"><strong>Prefeitura de Guarulhos</strong><span>Desenvolvedor da GCM Guarulhos</span>
+              </div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="hl-text"><strong>Ciências da Computação</strong><span>Em andamento</span></div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-icon"><i class="fas fa-language"></i></div>
+              <div class="hl-text"><strong>Inglês</strong><span>Leitura e conversação</span></div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-icon"><i class="fas fa-robot"></i></div>
+              <div class="hl-text"><strong>IA no fluxo</strong><span>Processos otimizados</span></div>
+            </div>
+          </div>
+          <div class="sobre-social">
+            <a href="https://github.com/GuiMachadoDevJS" target="_blank" class="social-link"><i
+                class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/guimachadodev/" target="_blank" class="social-link"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:guilhermedevjs@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/5511944474451" target="_blank" class="social-link"><i
+                class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ TIMELINE ══ -->
+  <section id="timeline">
+    <div class="container">
+      <div class="section-header" style="text-align:center">
+        <div class="section-eyebrow">// trajetória</div>
+        <h2 class="section-title">Como tudo começou</h2>
+      </div>
+      <div class="timeline-wrap">
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-year">2020</div>
+            <div class="tl-title">Primeiros projetos freelance</div>
+            <p class="tl-desc">Início no desenvolvimento web freelance via 99freelas — sites, lojas e ajustes em
+              Shopify. Todas as entregas avaliadas com nota 5.0.</p>
+            <div class="tl-tags"><span class="tl-tag">HTML/CSS/JS</span><span class="tl-tag">Shopify</span><span
+                class="tl-tag">Freelance</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-year">2023</div>
+            <div class="tl-title">Ingresso na GCM de Guarulhos</div>
+            <p class="tl-desc">Início da carreira como Guarda Civil Municipal na Prefeitura de Guarulhos — aliando
+              disciplina operacional à paixão pela tecnologia.</p>
+            <div class="tl-tags"><span class="tl-tag">Segurança Pública</span><span class="tl-tag">Guarulhos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-year">2024</div>
+            <div class="tl-title">Programador oficial da GCM</div>
+            <p class="tl-desc">Assumiu o papel de desenvolvedor interno da GCM, construindo sistemas
+              operacionais para controle de efetivo e relatórios.</p>
+            <div class="tl-tags"><span class="tl-tag">Node.js</span><span class="tl-tag">PostgreSQL</span><span
+                class="tl-tag">Gov.</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-year">2025</div>
+            <div class="tl-title">Sistemas governamentais em produção</div>
+            <p class="tl-desc">Entrega do DEAC, CSI e Observatório de Segurança Pública — sistemas usados diariamente
+              por centenas de agentes e acessíveis ao público.</p>
+            <div class="tl-tags"><span class="tl-tag">PHP</span><span class="tl-tag">Express</span><span
+                class="tl-tag">LGPD</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-year">2026 – hoje</div>
+            <div class="tl-title">Full Stack + IA no fluxo</div>
+            <p class="tl-desc">Evolução para stack completo. Integração de IA no processo de desenvolvimento para
+              entregar mais rápido e com maior qualidade.</p>
+            <div class="tl-tags"><span class="tl-tag">React</span><span class="tl-tag">Next.js</span><span
+                class="tl-tag">IA/LLMs</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ IA ══ -->
+  <section id="ia">
+    <div class="container">
+      <div class="ia-banner reveal">
+        <div class="ia-icon-wrap"><i class="fas fa-robot"></i></div>
+        <div class="ia-content">
+          <div class="ia-eyebrow">// diferencial</div>
+          <h2 class="ia-title">Desenvolvimento potencializado por IA</h2>
+          <p class="ia-desc">Uso ferramentas de IA como parte ativa do fluxo — para gerar, revisar e otimizar código,
+            criar documentação automática e acelerar prototipagem. Resultado: <strong>mais qualidade, menos retrabalho,
+              entrega mais ágil</strong>.</p>
+        </div>
+        <div class="ia-tools">
+          <div class="ia-tool"><i class="fas fa-sparkles"></i> Claude / ChatGPT</div>
+          <div class="ia-tool"><i class="fas fa-code"></i> GitHub Copilot</div>
+          <div class="ia-tool"><i class="fas fa-bolt"></i> Cursor IDE</div>
+          <div class="ia-tool"><i class="fas fa-file-code"></i> Geração de docs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ SKILLS ══ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">// habilidades</div>
+        <h2 class="section-title">Stack &amp; Especialidades</h2>
+        <p class="section-desc">Tecnologias que domino e uso em projetos reais — do front ao banco de dados.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-card-icon" style="background:rgba(249,115,22,.1);color:#f97316"><i
+              class="fas fa-layer-group"></i></div>
+          <h3>Front-end</h3>
+          <div class="skill-tags"><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span
+              class="skill-tag">Sass</span><span class="skill-tag">JavaScript</span><span
+              class="skill-tag">TypeScript</span><span class="skill-tag">React</span><span
+              class="skill-tag">Next.js</span><span class="skill-tag">Bootstrap</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-icon" style="background:rgba(34,197,94,.1);color:#22c55e"><i class="fas fa-server"></i>
+          </div>
+          <h3>Back-end</h3>
+          <div class="skill-tags"><span class="skill-tag">Node.js</span><span class="skill-tag">Express</span><span
+              class="skill-tag">PHP</span><span class="skill-tag">REST API</span><span class="skill-tag">JWT</span><span
+              class="skill-tag">Supabase</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-icon" style="background:rgba(59,130,246,.1);color:#3b82f6"><i
+              class="fas fa-database"></i></div>
+          <h3>Banco de Dados</h3>
+          <div class="skill-tags"><span class="skill-tag">PostgreSQL</span><span class="skill-tag">SQL
+              avançado</span><span class="skill-tag">PDO</span><span class="skill-tag">pg (Node)</span><span
+              class="skill-tag">Migrations</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-icon" style="background:rgba(139,92,246,.1);color:#8b5cf6"><i
+              class="fas fa-pen-ruler"></i></div>
+          <h3>UI/UX &amp; Design</h3>
+          <div class="skill-tags"><span class="skill-tag">Figma</span><span class="skill-tag">UI/UX</span><span
+              class="skill-tag">SEO On-page</span><span class="skill-tag">Responsivo</span><span
+              class="skill-tag">Acessibilidade</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-icon" style="background:rgba(236,72,153,.1);color:#ec4899"><i class="fas fa-robot"></i>
+          </div>
+          <h3>IA &amp; Automação</h3>
+          <div class="skill-tags"><span class="skill-tag">Claude AI</span><span class="skill-tag">ChatGPT</span><span
+              class="skill-tag">GitHub Copilot</span><span class="skill-tag">Cursor IDE</span><span
+              class="skill-tag">Prompt Engineering</span></div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-icon" style="background:rgba(245,158,11,.1);color:#f59e0b"><i
+              class="fas fa-rocket"></i></div>
+          <h3>Especialidades</h3>
+          <div class="skill-tags"><span class="skill-tag">Sistemas Admin</span><span
+              class="skill-tag">Dashboards</span><span class="skill-tag">CRUD completo</span><span
+              class="skill-tag">Landing Pages</span><span class="skill-tag">Pagamentos online</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ PROJETOS ══ -->
+  <section id="projetos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">// portfólio</div>
+        <h2 class="section-title">Projetos Selecionados</h2>
+        <p class="section-desc">Do freelance aos sistemas governamentais — projetos reais com impacto real. Passe o
+          mouse nos cards para ver mais.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- CSJ Rocha -->
+        <div class="project-card reveal">
+          <div class="project-screenshot">
+            <img class="project-screenshot-img img-main" src="assets/img/projects/csj-hero.png" alt="CSJ Rocha — Hero">
+            <img class="project-screenshot-img img-alt" src="assets/img/projects/csj-frota.png" alt="CSJ Rocha — Frota">
+            <div class="project-screenshot-placeholder"><i class="fas fa-truck-moving" style="color:#3b82f6"></i></div>
+            <div class="project-overlay"></div>
+            <span class="project-type-badge">Site Institucional</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Freelance · Transporte</div>
+            <div class="project-name">CSJ Rocha Transportes</div>
+            <p class="project-desc">Site completo para empresa de locação de caminhões Munck. Hero impactante, frota
+              detalhada, galeria e orçamento via WhatsApp.</p>
+            <div class="project-stack"><span class="stack-tag">HTML5</span><span class="stack-tag">CSS3</span><span
+                class="stack-tag">JavaScript</span></div>
+            <div class="project-links"><a href="https://csjrocha.com.br" target="_blank"
+                class="proj-link proj-link-primary"><i class="fas fa-external-link-alt"></i> Ver site</a></div>
+          </div>
+        </div>
+
+        <!-- Cat & Miau -->
+        <div class="project-card reveal">
+          <div class="project-screenshot">
+            <img class="project-screenshot-img img-main" src="assets/img/projects/catmiau-home.png"
+              alt="Cat & Miau Shop">
+            <img class="project-screenshot-img img-alt" src="assets/img/projects/catmiau-home.png"
+              alt="Cat & Miau Shop">
+            <div class="project-screenshot-placeholder"><i class="fas fa-cat" style="color:#f97316"></i></div>
+            <div class="project-overlay"></div>
+            <span class="project-type-badge">Landing Page</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Freelance · E-commerce</div>
+            <div class="project-name">Cat &amp; Miau Shop</div>
+            <p class="project-desc">Landing page para loja de produtos personalizados para gatos. Links para Instagram,
+              WhatsApp e Shopee com design fofo e funcional.</p>
+            <div class="project-stack"><span class="stack-tag">HTML5</span><span class="stack-tag">CSS3</span><span
+                class="stack-tag">JavaScript</span></div>
+            <div class="project-links"><a href="https://catmiaushop.com.br" target="_blank"
+                class="proj-link proj-link-primary"><i class="fas fa-external-link-alt"></i> Ver site</a></div>
+          </div>
+        </div>
+
+        <!-- Samurai -->
+        <div class="project-card reveal">
+          <div class="project-screenshot">
+            <img class="project-screenshot-img img-main" src="assets/img/projects/samurai-hero.png"
+              alt="Samurai Treinamento">
+            <img class="project-screenshot-img img-alt" src="assets/img/projects/samurai-servicos.png"
+              alt="Samurai Serviços">
+            <div class="project-screenshot-placeholder"><i class="fas fa-shield-halved" style="color:#ea580c"></i></div>
+            <div class="project-overlay"></div>
+            <span class="project-type-badge">Landing Page</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Freelance · Segurança</div>
+            <div class="project-name">Samurai Treinamento e Proteção</div>
+            <p class="project-desc">Landing page para cursos de proteção tática. Treinamentos, credenciais militares do
+              instrutor, depoimentos e CTA via WhatsApp.</p>
+            <div class="project-stack"><span class="stack-tag">HTML5</span><span class="stack-tag">CSS3</span><span
+                class="stack-tag">JavaScript</span><span class="stack-tag">PostgreSQL</span></div>
+            <div class="project-links"><a href="https://guimachadodevjs.github.io/samurai/index.html" target="_blank"
+                class="proj-link proj-link-primary"><i class="fas fa-external-link-alt"></i> Ver site</a></div>
+          </div>
+        </div>
+
+        <!-- OpenNew -->
+        <div class="project-card reveal">
+          <div class="project-screenshot">
+            <img class="project-screenshot-img img-main" src="assets/img/projects/opennew-login.png"
+              alt="OpenNew Login">
+            <img class="project-screenshot-img img-alt" src="assets/img/projects/opennew-dashboard.png"
+              alt="OpenNew Dashboard">
+            <div class="project-screenshot-placeholder"><i class="fas fa-comments" style="color:#10b981"></i></div>
+            <div class="project-overlay"></div>
+            <span class="project-type-badge">Aplicação Web</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Freelance · SaaS / Telecom</div>
+            <div class="project-name">OpenNew Telecomunicações</div>
+            <p class="project-desc">Plataforma de gestão com login, dashboard analítico, listagens, chatbox multi-canal,
+              relatórios semanais e integrações.</p>
+            <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span
+                class="stack-tag">JavaScript</span><span class="stack-tag">PostgreSQL</span></div>
+            <div class="project-links"><span class="proj-link proj-link-locked"><i class="fas fa-lock"></i> Acesso
+                privado</span></div>
+          </div>
+        </div>
+
+        <!-- Sistema GCM -->
+        <div class="project-card reveal">
+          <div class="project-screenshot">
+            <img class="project-screenshot-img img-main" src="assets/img/projects/gcm-login.png"
+              alt="Sistema GCM Login">
+            <img class="project-screenshot-img img-alt" src="assets/img/projects/gcm-painel.png"
+              alt="Sistema GCM Painel">
+            <div class="project-screenshot-placeholder"><i class="fas fa-shield-alt" style="color:#3b82f6"></i></div>
+            <div class="project-overlay"></div>
+            <span class="project-type-badge">Sistema Interno</span>
+            <span class="project-gov-badge">🏛 Gov.</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Prefeitura de Guarulhos · GCM</div>
+            <div class="project-name">Sistema Operacional GCM</div>
+            <p class="project-desc">Sistema de gestão interna com módulos de efetivo, mapa força, relatórios
+              operacionais, dashboards com gráficos e painel de gestão.</p>
+            <div class="project-stack"><span class="stack-tag">Node.js</span><span class="stack-tag">Express</span><span
+                class="stack-tag">PostgreSQL</span><span class="stack-tag">Bootstrap</span></div>
+            <div class="project-links"><span class="proj-link proj-link-locked"><i class="fas fa-lock"></i> Acesso
+                privado</span></div>
+          </div>
+        </div>
+
+        <!-- DEAC -->
+        <div class="project-card reveal">
+          <div class="project-screenshot">
+            <img class="project-screenshot-img img-main" src="assets/img/projects/deac-login.png" alt="DEAC Login">
+            <img class="project-screenshot-img img-alt" src="assets/img/projects/gcm-sidebar.png" alt="DEAC Sistema">
+            <div class="project-screenshot-placeholder"><i class="fas fa-calendar-check" style="color:#0ea5e9"></i>
+            </div>
+            <div class="project-overlay"></div>
+            <span class="project-type-badge">Sistema Web</span>
+            <span class="project-gov-badge">🏛 Gov.</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Prefeitura de Guarulhos · GCM</div>
+            <div class="project-name">DEAC — Diária Especial</div>
+            <p class="project-desc">Sistema para inscrição e gestão de plantões extras. Validações complexas (aptidão
+              psicológica, porte ativo, assiduidade e relatórios).</p>
+            <div class="project-stack"><span class="stack-tag">PHP</span><span class="stack-tag">PostgreSQL</span><span
+                class="stack-tag">Bootstrap</span><span class="stack-tag">jQuery</span></div>
+            <div class="project-links"><span class="proj-link proj-link-locked"><i class="fas fa-lock"></i> Acesso
+                privado</span></div>
+          </div>
+        </div>
+
+        <!-- CSI -->
+        <div class="project-card reveal">
+          <div class="project-screenshot">
+            <img class="project-screenshot-img img-main" src="assets/img/projects/csi-home.png" alt="CSI Home">
+            <img class="project-screenshot-img img-alt" src="assets/img/projects/csi-monitor.png" alt="CSI Monitor">
+            <div class="project-screenshot-placeholder"><i class="fas fa-camera" style="color:#8b5cf6"></i></div>
+            <div class="project-overlay"></div>
+            <span class="project-type-badge">Sistema de Inteligência</span>
+            <span class="project-gov-badge">🏛 Gov.</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Prefeitura de Guarulhos · Centro de Inteligência</div>
+            <div class="project-name">CSI — Central de Segurança Integrada</div>
+            <p class="project-desc">Registro e controle de ocorrências de monitoramento de veículos e reconhecimento
+              facial. KPIs em tempo real e conformidade com LGPD.</p>
+            <div class="project-stack"><span class="stack-tag">Node.js</span><span
+                class="stack-tag">PostgreSQL</span><span class="stack-tag">JavaScript</span></div>
+            <div class="project-links"><span class="proj-link proj-link-locked"><i class="fas fa-lock"></i> Acesso
+                privado</span></div>
+          </div>
+        </div>
+
+        <!-- Observatório -->
+        <div class="project-card reveal">
+          <div class="project-screenshot">
+            <img class="project-screenshot-img img-main" src="assets/img/projects/observatorio-stats.png"
+              alt="Observatório Stats">
+            <img class="project-screenshot-img img-alt" src="assets/img/projects/observatorio-graficos.png"
+              alt="Observatório Gráficos">
+            <div class="project-screenshot-placeholder"><i class="fas fa-chart-bar" style="color:#f59e0b"></i></div>
+            <div class="project-overlay"></div>
+            <span class="project-type-badge">Portal Público</span>
+            <span class="project-gov-badge">🏛 Gov.</span>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Prefeitura de Guarulhos · SSU</div>
+            <div class="project-name">Observatório de Segurança Pública</div>
+            <p class="project-desc">Portal público no site da Prefeitura exibindo dados criminais da cidade. Tabelas
+              estatísticas e gráficos comparativos por ano para os cidadãos.</p>
+            <div class="project-stack"><span class="stack-tag">PHP</span><span class="stack-tag">PostgreSQL</span><span
+                class="stack-tag">Bootstrap</span><span class="stack-tag">HTML5</span></div>
+            <div class="project-links"><a href="https://observatorioseguranca.guarulhos.sp.gov.br/dashboard/"
+                target="_blank" class="proj-link proj-link-primary"><i class="fas fa-external-link-alt"></i>
+                Acessar</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ PROCESSO ══ -->
+  <section id="processo">
+    <div class="container">
+      <div class="section-header" style="text-align:center">
+        <div class="section-eyebrow">// como trabalho</div>
+        <h2 class="section-title">Processo de Trabalho</h2>
+        <p class="section-desc" style="margin:0 auto">Do primeiro contato à entrega — transparência e organização em
+          cada etapa.</p>
+      </div>
+      <div class="processo-grid">
+        <div class="processo-step reveal">
+          <div class="processo-num">01</div>
+          <div class="processo-title">Conversa Inicial</div>
+          <p class="processo-desc">Entendo seu negócio, objetivos, público-alvo e prazo. Clareza total antes de escrever
+            uma linha de código.</p>
+        </div>
+        <div class="processo-step reveal">
+          <div class="processo-num">02</div>
+          <div class="processo-title">Planejamento</div>
+          <p class="processo-desc">Arquitetura, wireframe e proposta de design. Você aprova antes de começar o
+            desenvolvimento.</p>
+        </div>
+        <div class="processo-step reveal">
+          <div class="processo-num">03</div>
+          <div class="processo-title">Desenvolvimento</div>
+          <p class="processo-desc">Código limpo, responsivo e testado. Atualizações frequentes para você acompanhar o
+            progresso.</p>
+        </div>
+        <div class="processo-step reveal">
+          <div class="processo-num">04</div>
+          <div class="processo-title">Entrega &amp; Suporte</div>
+          <p class="processo-desc">Coloco o site no ar, faço o treinamento e ofereço suporte após a entrega. O projeto é
+            seu e você vai saber usar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ SERVIÇOS ══ -->
+  <section id="servicos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">// o que ofereço</div>
+        <h2 class="section-title">Serviços</h2>
+        <p class="section-desc">Soluções completas para quem precisa de um desenvolvedor que entrega.</p>
+      </div>
+      <div class="servicos-grid">
+        <div class="servico-card reveal">
+          <div class="servico-icon"><i class="fas fa-rocket"></i></div>
+          <div class="servico-name">Landing Page</div>
+          <p class="servico-desc">Página de alta conversão, responsiva e otimizada para SEO. Ideal para divulgar
+            produtos, serviços ou capturar leads.</p>
+          <a href="#contato" class="servico-cta">Solicitar <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="servico-card reveal">
+          <div class="servico-icon" style="background:rgba(16,185,129,.1);color:var(--green)"><i
+              class="fas fa-building"></i></div>
+          <div class="servico-name">Site Institucional</div>
+          <p class="servico-desc">Site completo para sua empresa: sobre, serviços, portfólio, contato e formulário.
+            Design moderno e profissional.</p>
+          <a href="#contato" class="servico-cta">Solicitar <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="servico-card reveal">
+          <div class="servico-icon" style="background:rgba(139,92,246,.1);color:var(--accent3)"><i
+              class="fas fa-gears"></i></div>
+          <div class="servico-name">Sistema Web / App</div>
+          <p class="servico-desc">Sistema com login, CRUD completo, relatórios e painel administrativo. PHP ou Node.js +
+            PostgreSQL.</p>
+          <a href="#contato" class="servico-cta">Solicitar <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="servico-card reveal">
+          <div class="servico-icon" style="background:rgba(245,158,11,.1);color:#f59e0b"><i
+              class="fas fa-chart-line"></i></div>
+          <div class="servico-name">Dashboard / Painel</div>
+          <p class="servico-desc">Painéis com gráficos, KPIs, filtros e exportação de dados. Integração completa com
+            banco de dados.</p>
+          <a href="#contato" class="servico-cta">Solicitar <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="servico-card reveal">
+          <div class="servico-icon" style="background:rgba(236,72,153,.1);color:#ec4899"><i class="fas fa-plug"></i>
+          </div>
+          <div class="servico-name">API REST</div>
+          <p class="servico-desc">Desenvolvimento de APIs com autenticação JWT, documentação e integração com frontends
+            e apps externos.</p>
+          <a href="#contato" class="servico-cta">Solicitar <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="servico-card reveal">
+          <div class="servico-icon" style="background:rgba(249,115,22,.1);color:#f97316"><i
+              class="fas fa-screwdriver-wrench"></i></div>
+          <div class="servico-name">Manutenção &amp; Melhorias</div>
+          <p class="servico-desc">Correção de bugs, otimização de performance, ajustes de layout e novas funcionalidades
+            em projetos existentes.</p>
+          <a href="#contato" class="servico-cta">Solicitar <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="servico-card reveal">
+          <div class="servico-icon" style="background:rgba(139,92,246,.1);color:#8b5cf6"><i class="fas fa-robot"></i>
+          </div>
+          <div class="servico-name">IA &amp; Automação</div>
+          <p class="servico-desc">Integração de Inteligência Artificial no seu produto — chatbots, automação de
+            processos, geração de conteúdo e fluxos inteligentes que economizam tempo e reduzem custo operacional.</p>
+          <a href="#contato" class="servico-cta">Solicitar <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ DEPOIMENTOS ══ -->
+  <section id="depoimentos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">// avaliações</div>
+        <h2 class="section-title">O que dizem sobre o trabalho</h2>
+        <p class="section-desc">Feedbacks reais de clientes e avaliações verificadas na plataforma 99freelas.</p>
+      </div>
+      <div class="depoimentos-tabs">
+        <button class="dep-tab active" data-filter="all">Todos</button>
+        <button class="dep-tab" data-filter="cliente">Clientes diretos</button>
+        <button class="dep-tab" data-filter="99freelas">99freelas</button>
+      </div>
+      <div class="depoimentos-grid">
+        <div class="depoimento-card reveal" data-source="cliente">
+          <div class="depoimento-stars">★★★★★</div>
+          <div class="depoimento-title">CSJ Rocha Transportes</div>
+          <p class="depoimento-text">"O Guilherme entregou o site exatamente como imaginamos. Moderno, rápido e com
+            todos os detalhes da nossa frota. Atendimento rápido e profissional do início ao fim."</p>
+          <div class="depoimento-author">
+            <div class="author-avatar">C</div>
+            <div class="author-info"><strong>CSJ Rocha</strong><span>csjrocha.com.br</span></div>
+          </div>
+        </div>
+        <div class="depoimento-card reveal" data-source="cliente">
+          <div class="depoimento-stars">★★★★★</div>
+          <div class="depoimento-title">Cat &amp; Miau Shop</div>
+          <p class="depoimento-text">"Nossa loja ganhou uma cara nova e as visitas aumentaram muito. O site ficou lindo,
+            carrega rápido e ficamos surpresas com a qualidade. Super recomendo!"</p>
+          <div class="depoimento-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#f97316,#ec4899)">C</div>
+            <div class="author-info"><strong>Cat &amp; Miau Shop</strong><span>catmiaushop.com.br</span></div>
+          </div>
+        </div>
+        <div class="depoimento-card reveal" data-source="cliente">
+          <div class="depoimento-stars">★★★★★</div>
+          <div class="depoimento-title">GCM Guarulhos — Sistema Interno</div>
+          <p class="depoimento-text">"O sistema desenvolvido pelo Guilherme é utilizado por centenas de agentes
+            diariamente. Código organizado, documentado e fácil de evoluir."</p>
+          <div class="depoimento-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#1d4ed8,#0ea5e9)">G</div>
+            <div class="author-info"><strong>GCM Guarulhos</strong><span>Prefeitura de Guarulhos</span></div>
+          </div>
+        </div>
+        <div class="depoimento-card reveal" data-source="99freelas">
+          <div class="dep-source-badge"><i class="fas fa-star"></i> 99freelas · 5.0</div>
+          <div class="depoimento-stars">★★★★★</div>
+          <div class="depoimento-title">Criação de Website</div>
+          <p class="depoimento-text">"Ficou muito bonito o meu site. Guilherme também me guiou na compra do host,
+            explicando tudo durante o processo, sempre disponível para responder as minhas dúvidas. Em breve voltarei
+            para outras páginas."</p>
+          <div class="depoimento-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">S</div>
+            <div class="author-info"><strong>Samara A.</strong></div>
+          </div>
+        </div>
+        <div class="depoimento-card reveal" data-source="99freelas">
+          <div class="dep-source-badge"><i class="fas fa-star"></i> 99freelas · 5.0</div>
+          <div class="depoimento-stars">★★★★★</div>
+          <div class="depoimento-title">Loja Shopify × Ajuste Script</div>
+          <p class="depoimento-text">"Ótimo!!! Ele nos atendeu de imediato e resolveu o problema na minha loja. Obrigada
+            ;)"</p>
+          <div class="depoimento-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#10b981,#06b6d4)">C</div>
+            <div class="author-info"><strong>Cirlea L.</strong></div>
+          </div>
+        </div>
+        <div class="depoimento-card reveal" data-source="99freelas">
+          <div class="dep-source-badge"><i class="fas fa-star"></i> 99freelas · 5.0</div>
+          <div class="depoimento-stars">★★★★★</div>
+          <div class="depoimento-title">Formatar e comentar funcionalidades de código</div>
+          <p class="depoimento-text">"Freelancer super maneiro, boa comunicação e trabalho ótimo!"</p>
+          <div class="depoimento-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#3b82f6,#8b5cf6)">D</div>
+            <div class="author-info"><strong>Daniela G.</strong></div>
+          </div>
+        </div>
+        <div class="depoimento-card reveal" data-source="99freelas">
+          <div class="dep-source-badge"><i class="fas fa-star"></i> 99freelas · 5.0</div>
+          <div class="depoimento-stars">★★★★★</div>
+          <div class="depoimento-title">Site de venda e instalação de forro PVC</div>
+          <p class="depoimento-text">"Excelente profissional e foi muito bacana na construção da ideia."</p>
+          <div class="depoimento-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#0ea5e9,#10b981)">R</div>
+            <div class="author-info"><strong>Rodolfo F.</strong></div>
+          </div>
+        </div>
+        <div class="depoimento-card reveal" data-source="99freelas">
+          <div class="dep-source-badge"><i class="fas fa-star"></i> 99freelas · 5.0</div>
+          <div class="depoimento-stars">★★★★★</div>
+          <div class="depoimento-title">Arrumar o meu tema — Shopify</div>
+          <p class="depoimento-text">"Excelente profissional, atendeu de maneira rápida e objetiva. Recomendaria
+            novamente."</p>
+          <div class="depoimento-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#6366f1,#ec4899)">C</div>
+            <div class="author-info"><strong>Kaik C.</strong></div>
+          </div>
+        </div>
+      </div>
+      <p class="depoimentos-note">Tem um projeto em mente? <a href="#contato">Vamos conversar</a> — sem compromisso.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ FAQ ══ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header" style="text-align:center">
+        <div class="section-eyebrow">// dúvidas</div>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-question">Quanto tempo leva para fazer um site? <i
+              class="fas fa-plus faq-icon"></i></button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Depende da complexidade. Uma landing page leva de 3 a 7 dias. Um site
+              institucional completo, de 1 a 3 semanas. Um sistema web com banco de dados pode levar de 3 semanas a 2
+              meses. Sempre informo o prazo antes de iniciar.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Você faz manutenção após a entrega? <i class="fas fa-plus faq-icon"></i></button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim. Ofereço suporte pós-entrega e planos de manutenção mensal para correções,
+              atualizações de conteúdo e melhorias contínuas no projeto.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Trabalha com contrato? <i class="fas fa-plus faq-icon"></i></button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim, sempre. O contrato protege os dois lados e define os detalhes do projeto,
+              prazo, valores
+              e formas de pagamento. Trabalho com total transparência.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Como funciona o pagamento? <i class="fas fa-plus faq-icon"></i></button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Geralmente dividido em 50% no início e 50% na entrega. Para projetos maiores
+              posso parcelar em 3 etapas. Aceito Pix, TED e cartão.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Você cuida da hospedagem e domínio? <i class="fas fa-plus faq-icon"></i></button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim, posso orientar e auxiliar na contratação de hospedagem e registro de
+              domínio, ou fazer tudo por você se preferir.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Você atende fora de Guarulhos? <i class="fas fa-plus faq-icon"></i></button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim! Atendo clientes de todo o Brasil de forma 100% remota via WhatsApp,
+              e-mail e chamadas de vídeo. Já trabalhei com clientes de outros Estados e até de outros países.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ APRENDENDO AGORA ══ -->
+  <section id="aprendendo">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">// em evolução</div>
+        <h2 class="section-title">Atualmente Aprendendo</h2>
+        <p class="section-desc">Tecnologias que estou estudando agora — porque um bom dev não para de evoluir.</p>
+      </div>
+      <div class="aprendendo-grid">
+        <div class="aprend-card reveal">
+          <div class="aprend-icon" style="background:rgba(59,130,246,.1);color:#3b82f6"><i class="fab fa-react"></i>
+          </div>
+          <div class="aprend-body">
+            <div class="aprend-name">React Avançado</div>
+            <div class="aprend-level">Hooks, Context, Performance</div>
+            <div class="aprend-bar-wrap">
+              <div class="aprend-bar" style="width:75%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="aprend-card reveal">
+          <div class="aprend-icon" style="background:rgba(0,0,0,.15);color:#fff"><i class="fas fa-n"
+              style="font-style:normal;font-weight:800;font-family:serif"></i></div>
+          <div class="aprend-body">
+            <div class="aprend-name">Next.js 14</div>
+            <div class="aprend-level">App Router, Server Components</div>
+            <div class="aprend-bar-wrap">
+              <div class="aprend-bar" style="width:60%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="aprend-card reveal">
+          <div class="aprend-icon" style="background:rgba(37,99,235,.1);color:#3b82f6"><i class="fas fa-code"></i></div>
+          <div class="aprend-body">
+            <div class="aprend-name">TypeScript</div>
+            <div class="aprend-level">Types avançados, Generics</div>
+            <div class="aprend-bar-wrap">
+              <div class="aprend-bar" style="width:70%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="aprend-card reveal">
+          <div class="aprend-icon" style="background:rgba(16,185,129,.1);color:#10b981"><i class="fas fa-flask"></i>
+          </div>
+          <div class="aprend-body">
+            <div class="aprend-name">Testes Automatizados</div>
+            <div class="aprend-level">Jest, Cypress, Testing Library</div>
+            <div class="aprend-bar-wrap">
+              <div class="aprend-bar" style="width:40%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="aprend-card reveal">
+          <div class="aprend-icon" style="background:rgba(139,92,246,.1);color:#8b5cf6"><i class="fas fa-box"></i></div>
+          <div class="aprend-body">
+            <div class="aprend-name">Docker</div>
+            <div class="aprend-level">Containers, Docker Compose</div>
+            <div class="aprend-bar-wrap">
+              <div class="aprend-bar" style="width:35%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ GITHUB ══ -->
+  <section id="github-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">// open source</div>
+        <h2 class="section-title">GitHub</h2>
+        <p class="section-desc">Código aberto. Transparência total.</p>
+      </div>
+      <div class="github-inner">
+        <div class="github-profile-card reveal">
+          <div class="github-avatar-wrap">
+            <div class="github-avatar">
+              <img src="https://avatars.githubusercontent.com/GuiMachadoDevJS" alt="GitHub Avatar"
+                onerror="this.style.display='none'">
+            </div>
+            <div class="github-online"></div>
+          </div>
+          <div class="github-name">Guilherme Pelegrino</div>
+          <div class="github-handle">@GuiMachadoDevJS</div>
+          <div class="github-stats-row">
+            <div class="gh-stat">
+              <div class="gh-stat-num" id="gh-repos-count">—</div>
+              <div class="gh-stat-label">Repos</div>
+            </div>
+            <div class="gh-stat">
+              <div class="gh-stat-num" id="gh-stars">—</div>
+              <div class="gh-stat-label">Stars</div>
+            </div>
+          </div>
+          <a href="https://github.com/GuiMachadoDevJS" target="_blank" class="github-link-btn">
+            <i class="fab fa-github"></i> Ver perfil completo
+          </a>
+        </div>
+        <div>
+          <div class="repos-list" id="github-repos">
+            <p class="repos-loading"><i class="fas fa-spinner fa-spin"></i> Carregando repositórios...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ CONTATO ══ -->
+  <section id="contato">
+    <div class="container">
+      <div class="contato-grid">
+        <div class="contato-info reveal">
+          <div class="section-eyebrow">// contato</div>
+          <h2 class="section-title">Vamos construir<br>algo juntos?</h2>
+          <p class="section-desc">Seja um site, sistema ou manutenção — respondo rápido e entrego com qualidade.</p>
+          <div class="contato-items">
+            <div class="contato-item">
+              <div class="contato-item-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="contato-item-label">E-mail</div>
+                <a href="mailto:guilhermedevjs@gmail.com" class="contato-item-value">guilhermedevjs@gmail.com</a>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-item-icon"
+                style="background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.15);color:var(--green)"><i
+                  class="fab fa-whatsapp"></i></div>
+              <div>
+                <div class="contato-item-label">WhatsApp</div>
+                <a href="https://wa.me/5511944474451" target="_blank" class="contato-item-value">(11) 94447-4451</a>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-item-icon"
+                style="background:rgba(99,102,241,.1);border-color:rgba(99,102,241,.15);color:#818cf8"><i
+                  class="fab fa-linkedin-in"></i></div>
+              <div>
+                <div class="contato-item-label">LinkedIn</div>
+                <a href="https://www.linkedin.com/in/guimachadodev/" target="_blank"
+                  class="contato-item-value">guimachadodev</a>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-item-icon"
+                style="background:rgba(255,255,255,.05);border-color:var(--border);color:var(--muted)"><i
+                  class="fab fa-github"></i></div>
+              <div>
+                <div class="contato-item-label">GitHub</div>
+                <a href="https://github.com/GuiMachadoDevJS" target="_blank"
+                  class="contato-item-value">GuiMachadoDevJS</a>
+              </div>
+            </div>
+          </div>
+          <div class="contato-avail">
+            <div class="avail-dot"></div> Disponível para novos projetos
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="contato-form-wrap">
+            <div id="formContent">
+              <div class="form-title">Solicite um Orçamento</div>
+              <p class="form-subtitle">Preencha o formulário e retorno em até 24h.</p>
+              <div class="form-row">
+                <div class="form-group"><label>Nome *</label><input type="text" id="cNome" placeholder="Seu nome"></div>
+                <div class="form-group"><label>WhatsApp *</label><input type="tel" id="cTel"
+                    placeholder="(11) 99999-9999"></div>
+              </div>
+              <div class="form-group"><label>E-mail</label><input type="email" id="cEmail" placeholder="seu@email.com">
+              </div>
+              <div class="form-group">
+                <label>Tipo de projeto</label>
+                <div class="form-services">
+                  <span class="form-service-opt" onclick="toggleService(this)">Landing Page</span>
+                  <span class="form-service-opt" onclick="toggleService(this)">Site Institucional</span>
+                  <span class="form-service-opt" onclick="toggleService(this)">Sistema Web</span>
+                  <span class="form-service-opt" onclick="toggleService(this)">Dashboard</span>
+                  <span class="form-service-opt" onclick="toggleService(this)">API REST</span>
+                  <span class="form-service-opt" onclick="toggleService(this)">Manutenção</span>
+                  <span class="form-service-opt" onclick="toggleService(this)">Outro</span>
+                </div>
+              </div>
+              <div class="form-group"><label>Mensagem *</label><textarea id="cMsg"
+                  placeholder="Descreva seu projeto, prazo e qualquer detalhe importante..."></textarea></div>
+              <button class="form-submit" onclick="submitForm()"><i class="fas fa-paper-plane"></i> Enviar
+                Mensagem</button>
+            </div>
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i>
+              <h3>Mensagem enviada!</h3>
+              <p>Obrigado, <span id="successName"></span>. Retorno em breve via WhatsApp ou e-mail.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ PREÇOS ══ -->
+  <section id="precos">
+    <div class="container">
+      <div class="section-header" style="text-align:center">
+        <div class="section-eyebrow">// investimento</div>
+        <h2 class="section-title">Pacotes &amp; Preços</h2>
+        <p class="section-desc" style="margin:0 auto">Transparência desde o início. Valores referenciais — orçamento
+          final após conversa inicial.</p>
+      </div>
+      <div class="precos-toggle-wrap">
+        <span class="pt-label">Projeto único</span>
+        <button class="precos-toggle" id="precosToggle" onclick="togglePrecos()">
+          <div class="pt-knob"></div>
+        </button>
+        <span class="pt-label">+ Manutenção mensal <span class="pt-badge">Popular</span></span>
+      </div>
+      <div class="precos-grid">
+
+        <div class="preco-card reveal">
+          <div class="preco-header">
+            <div class="preco-icon" style="background:rgba(16,185,129,.12);color:#10b981"><i class="fas fa-rocket"></i>
+            </div>
+            <div class="preco-name">Starter</div>
+            <div class="preco-desc">Landing page ou site simples</div>
+          </div>
+          <div class="preco-price-wrap">
+            <div class="preco-price" data-base="500" data-manut="97">
+              <span class="preco-from">a partir de</span>
+              <span class="preco-val">R$ 500</span>
+            </div>
+            <div class="preco-manut" style="display:none">+ R$ 97/mês manutenção</div>
+          </div>
+          <ul class="preco-lista">
+            <li><i class="fas fa-check"></i> Landing page responsiva</li>
+            <li><i class="fas fa-check"></i> Até 5 seções</li>
+            <li><i class="fas fa-check"></i> Formulário WhatsApp</li>
+            <li><i class="fas fa-check"></i> SEO básico</li>
+            <li><i class="fas fa-check"></i> Deploy + domínio orientado</li>
+            <li class="off"><i class="fas fa-times"></i> Banco de dados</li>
+            <li class="off"><i class="fas fa-times"></i> Painel admin</li>
+          </ul>
+          <a href="#contato" class="preco-cta btn-ghost">Solicitar <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="preco-card featured reveal">
+          <div class="preco-badge-top">Mais solicitado</div>
+          <div class="preco-header">
+            <div class="preco-icon" style="background:rgba(59,130,246,.15);color:#3b82f6"><i
+                class="fas fa-building"></i></div>
+            <div class="preco-name">Profissional</div>
+            <div class="preco-desc">Site completo ou sistema simples</div>
+          </div>
+          <div class="preco-price-wrap">
+            <div class="preco-price" data-base="1500" data-manut="297">
+              <span class="preco-from">a partir de</span>
+              <span class="preco-val">R$ 1.500</span>
+            </div>
+            <div class="preco-manut" style="display:none">+ R$ 297/mês manutenção</div>
+          </div>
+          <ul class="preco-lista">
+            <li><i class="fas fa-check"></i> Site institucional completo</li>
+            <li><i class="fas fa-check"></i> Seções ilimitadas</li>
+            <li><i class="fas fa-check"></i> Formulário de contato</li>
+            <li><i class="fas fa-check"></i> SEO otimizado</li>
+            <li><i class="fas fa-check"></i> Deploy + hospedagem orientada</li>
+            <li><i class="fas fa-check"></i> Banco de dados básico</li>
+            <li class="off"><i class="fas fa-times"></i> Painel admin completo</li>
+          </ul>
+          <button class="preco-cta btn-primary" onclick="openOrcamento()">Solicitar <i
+              class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <div class="preco-card reveal">
+          <div class="preco-header">
+            <div class="preco-icon" style="background:rgba(139,92,246,.12);color:#8b5cf6"><i class="fas fa-gears"></i>
+            </div>
+            <div class="preco-name">Premium</div>
+            <div class="preco-desc">Sistema web completo + painel</div>
+          </div>
+          <div class="preco-price-wrap">
+            <div class="preco-price" data-base="2500" data-manut="397">
+              <span class="preco-from">a partir de</span>
+              <span class="preco-val">R$ 2.500</span>
+            </div>
+            <div class="preco-manut" style="display:none">+ R$ 397/mês manutenção</div>
+          </div>
+          <ul class="preco-lista">
+            <li><i class="fas fa-check"></i> Sistema web completo</li>
+            <li><i class="fas fa-check"></i> Login + JWT autenticação</li>
+            <li><i class="fas fa-check"></i> CRUD + painel admin</li>
+            <li><i class="fas fa-check"></i> Dashboard com gráficos</li>
+            <li><i class="fas fa-check"></i> API REST documentada</li>
+            <li><i class="fas fa-check"></i> PostgreSQL + backups</li>
+            <li><i class="fas fa-check"></i> Suporte 3 meses incluso</li>
+          </ul>
+          <a href="#contato" class="preco-cta btn-ghost">Solicitar <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+      <p class="precos-note"><i class="fas fa-info-circle"></i> Valores são referências. O orçamento real depende dos
+        detalhes do projeto, prazo e complexidade do projeto. <a href="#contato">Entre em contato</a> para uma proposta
+        personalizada
+        sem compromisso.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ CALCULADORA DE ORÇAMENTO ══ -->
+  <section id="calculadora">
+    <div class="container">
+      <div class="section-header" style="text-align:center">
+        <div class="section-eyebrow">// simule agora</div>
+        <h2 class="section-title">Calculadora de Orçamento</h2>
+        <p class="section-desc" style="margin:0 auto">Selecione as opções e veja uma estimativa instantânea do seu
+          projeto.</p>
+      </div>
+      <div class="calc-grid">
+        <div class="calc-form reveal">
+
+          <div class="calc-group">
+            <div class="calc-label">Tipo de projeto</div>
+            <div class="calc-opts" id="calcTipo">
+              <div class="calc-opt selected" data-val="500" onclick="calcSelect(this,'calcTipo')"><i
+                  class="fas fa-rocket"></i> Landing Page</div>
+              <div class="calc-opt" data-val="1500" onclick="calcSelect(this,'calcTipo')"><i
+                  class="fas fa-building"></i> Site Institucional</div>
+              <div class="calc-opt" data-val="2500" onclick="calcSelect(this,'calcTipo')"><i class="fas fa-gears"></i>
+                Sistema Web</div>
+              <div class="calc-opt" data-val="2000" onclick="calcSelect(this,'calcTipo')"><i
+                  class="fas fa-chart-line"></i> Dashboard</div>
+              <div class="calc-opt" data-val="1500" onclick="calcSelect(this,'calcTipo')"><i class="fas fa-plug"></i>
+                API REST</div>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <div class="calc-label">Prazo desejado</div>
+            <div class="calc-opts" id="calcPrazo">
+              <div class="calc-opt" data-val="1.4" onclick="calcSelect(this,'calcPrazo')"><i class="fas fa-fire"></i>
+                Urgente (&lt;1sem)</div>
+              <div class="calc-opt selected" data-val="1" onclick="calcSelect(this,'calcPrazo')"><i
+                  class="fas fa-calendar"></i> Normal (2–4sem)</div>
+              <div class="calc-opt" data-val="0.85" onclick="calcSelect(this,'calcPrazo')"><i class="fas fa-leaf"></i>
+                Flexível (&gt;1mês)</div>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <div class="calc-label">Funcionalidades extras</div>
+            <div class="calc-extras" id="calcExtras">
+              <label class="calc-extra"><input type="checkbox" value="800" onchange="calcUpdate()"> <i
+                  class="fas fa-lock"></i> Login / Autenticação</label>
+              <label class="calc-extra"><input type="checkbox" value="600" onchange="calcUpdate()"> <i
+                  class="fas fa-database"></i> Banco de dados</label>
+              <label class="calc-extra"><input type="checkbox" value="500" onchange="calcUpdate()"> <i
+                  class="fas fa-credit-card"></i> Pagamento online</label>
+              <label class="calc-extra"><input type="checkbox" value="400" onchange="calcUpdate()"> <i
+                  class="fas fa-envelope"></i> E-mail marketing</label>
+              <label class="calc-extra"><input type="checkbox" value="700" onchange="calcUpdate()"> <i
+                  class="fas fa-mobile-alt"></i> App mobile (PWA)</label>
+              <label class="calc-extra"><input type="checkbox" value="300" onchange="calcUpdate()"> <i
+                  class="fas fa-search"></i> SEO avançado</label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="calc-result reveal">
+          <div class="calc-result-card">
+            <div class="calc-result-label">// estimativa</div>
+            <div class="calc-result-range" id="calcRange">R$ 500 – R$ 700</div>
+            <div class="calc-result-desc">Valor de referência baseado nas opções selecionadas. O orçamento real pode
+              variar de acordo com os detalhes do projeto.</div>
+            <div class="calc-breakdown" id="calcBreakdown">
+              <div class="cbd-row"><span>Projeto base</span><span id="cbBase">R$ 500</span></div>
+              <div class="cbd-row"><span>Prazo</span><span id="cbPrazo">Normal</span></div>
+              <div class="cbd-row" id="cbExtrasRow" style="display:none"><span>Extras</span><span id="cbExtras">+ R$
+                  0</span></div>
+            </div>
+            <button class="btn-primary" style="width:100%;justify-content:center;margin-top:1.25rem"
+              onclick="openOrcamento()">
+              <i class="fab fa-whatsapp"></i> Solicitar orçamento real
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ GARANTIAS ══ -->
+  <section id="garantias">
+    <div class="container">
+      <div class="section-header" style="text-align:center">
+        <div class="section-eyebrow">// compromisso</div>
+        <h2 class="section-title">O que esperar?</h2>
+      </div>
+      <div class="garantias-grid">
+        <div class="garantia-card reveal">
+          <div class="garantia-icon"><i class="fas fa-clock"></i></div>
+          <div class="garantia-title">Entrega no Prazo</div>
+          <p class="garantia-desc">Estabeleço prazos realistas e cumpro. Nenhum projeto entregue fora do prazo acordado
+            em contrato.</p>
+        </div>
+        <div class="garantia-card reveal">
+          <div class="garantia-icon"
+            style="color:#10b981;border-color:rgba(16,185,129,.2);background:rgba(16,185,129,.08)"><i
+              class="fas fa-code"></i></div>
+          <div class="garantia-title">Código Documentado</div>
+          <p class="garantia-desc">Código limpo, comentado e com README. Você ou outro dev consegue dar manutenção sem
+            dificuldade.</p>
+        </div>
+        <div class="garantia-card reveal">
+          <div class="garantia-icon"
+            style="color:#8b5cf6;border-color:rgba(139,92,246,.2);background:rgba(139,92,246,.08)"><i
+              class="fas fa-headset"></i></div>
+          <div class="garantia-title">Suporte Pós-entrega</div>
+          <p class="garantia-desc">30 dias de suporte gratuito após a entrega. Bugs, ajustes e dúvidas resolvidos
+            rapidamente.</p>
+        </div>
+        <div class="garantia-card reveal">
+          <div class="garantia-icon"
+            style="color:#f59e0b;border-color:rgba(245,158,11,.2);background:rgba(245,158,11,.08)"><i
+              class="fas fa-mobile-screen"></i></div>
+          <div class="garantia-title">100% Responsivo</div>
+          <p class="garantia-desc">Todo projeto é testado em mobile, tablet e desktop antes da entrega. Funciona em
+            qualquer tela.</p>
+        </div>
+        <div class="garantia-card reveal">
+          <div class="garantia-icon"
+            style="color:#ec4899;border-color:rgba(236,72,153,.2);background:rgba(236,72,153,.08)"><i
+              class="fas fa-file-contract"></i></div>
+          <div class="garantia-title">Contrato Sempre</div>
+          <p class="garantia-desc">Detalhes, prazo e valor definidos em contrato. Transparência total — sem surpresas no
+            meio do projeto.</p>
+        </div>
+        <div class="garantia-card reveal">
+          <div class="garantia-icon"
+            style="color:#06b6d4;border-color:rgba(6,182,212,.2);background:rgba(6,182,212,.08)"><i
+              class="fas fa-gauge-high"></i></div>
+          <div class="garantia-title">Performance Otimizada</div>
+          <p class="garantia-desc">Sites com Google PageSpeed 90+. Carregamento rápido, imagens otimizadas e código
+            minificado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ CONTADOR DE VISITANTES ══ -->
+  <section id="visitas-section" style="padding:2rem 2.5rem">
+    <div class="container">
+      <div class="visitas-bar reveal">
+        <div class="visitas-left">
+          <div class="vis-dot"></div>
+          <span id="visitas-num" class="vis-num">—</span>
+          <span class="vis-label">pessoas já visitaram este portfólio</span>
+        </div>
+        <div class="visitas-right">
+          <span class="vis-tag"><i class="fas fa-map-marker-alt"></i> Guarulhos, SP</span>
+          <span class="vis-tag"><i class="fas fa-star"></i> 5.0 no 99freelas</span>
+          <span class="vis-tag"><i class="fas fa-shield-halved"></i> Programador GCM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-inner">
+      <a href="#hero" class="footer-logo" title="GMP = Guilherme Machado Pelegrino"><span>GMP</span>Dev</a>
+      <p class="footer-copy">© 2026 GMPDev · Feito com energético, código e zero enrolação.</p>
+      <div class="footer-links">
+        <a href="https://github.com/GuiMachadoDevJS" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/guimachadodev/" target="_blank">LinkedIn</a>
+        <a href="mailto:guilhermedevjs@gmail.com">E-mail</a>
+        <a href="https://www.99freelas.com.br/user/guimachadodevjs" target="_blank">99freelas</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ SCROLL TO TOP ══ -->
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- ══ WHATSAPP FLUTUANTE ══ -->
+  <a href="https://wa.me/5511944474451?text=Ol%C3%A1%20Guilherme!%20Vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+    target="_blank" class="wa-float" id="waFloat" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Fale comigo!</span>
+  </a>
+
+  <!-- ══ EXIT INTENT MODAL ══ -->
+  <div class="exit-overlay" id="exitOverlay">
+    <div class="exit-modal">
+      <button class="exit-close" onclick="closeExit()"><i class="fas fa-times"></i></button>
+      <div class="exit-emoji">👋</div>
+      <h2 class="exit-title">Antes de ir...</h2>
+      <p class="exit-sub">Quer receber uma <strong>proposta gratuita</strong> no seu WhatsApp?<br>Leva menos de 30
+        segundos.</p>
+      <div class="exit-form">
+        <input type="tel" id="exitWa" placeholder="(11) 99999-9999" maxlength="15">
+        <button class="btn-primary" onclick="sendExitLead()"><i class="fab fa-whatsapp"></i> Quero a proposta!</button>
+      </div>
+      <button class="exit-skip" onclick="closeExit()">Não, obrigado</button>
+    </div>
+  </div>
+
+  <!-- ══ MODAL ORÇAMENTO ══ -->
+  <div class="modal-overlay" id="orcModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeOrcamento()"><i class="fas fa-times"></i></button>
+      <div class="modal-title">Solicitar Orçamento</div>
+      <p class="modal-subtitle">Escolha os serviços e preencha os dados para receber uma proposta.</p>
+      <div class="orcamento-steps">
+        <div class="step-dot active" id="sd1"></div>
+        <div class="step-dot" id="sd2"></div>
+        <div class="step-dot" id="sd3"></div>
+        <span class="step-label" id="stepLabel">1 — Escolha os serviços</span>
+      </div>
+      <div class="orcamento-step active" id="step1">
+        <div class="orcamento-services">
+          <div class="orc-service" onclick="toggleOrcService(this,'Landing Page')"><i
+              class="fas fa-rocket"></i><strong>Landing Page</strong><span>Página de conversão</span></div>
+          <div class="orc-service" onclick="toggleOrcService(this,'Site Institucional')"><i
+              class="fas fa-building"></i><strong>Site Institucional</strong><span>Presença digital completa</span>
+          </div>
+          <div class="orc-service" onclick="toggleOrcService(this,'Sistema Web')"><i
+              class="fas fa-gears"></i><strong>Sistema Web</strong><span>CRUD + painel admin</span></div>
+          <div class="orc-service" onclick="toggleOrcService(this,'Dashboard')"><i
+              class="fas fa-chart-line"></i><strong>Dashboard</strong><span>Gráficos e relatórios</span></div>
+          <div class="orc-service" onclick="toggleOrcService(this,'API REST')"><i class="fas fa-plug"></i><strong>API
+              REST</strong><span>Backend e integrações</span></div>
+          <div class="orc-service" onclick="toggleOrcService(this,'Manutenção')"><i
+              class="fas fa-tools"></i><strong>Manutenção</strong><span>Ajustes e melhorias</span></div>
+        </div>
+        <div class="modal-nav"><span></span><button class="btn-primary" onclick="goStep(2)">Próximo <i
+              class="fas fa-arrow-right"></i></button></div>
+      </div>
+      <div class="orcamento-step" id="step2">
+        <div class="form-row">
+          <div class="form-group"><label>Nome *</label><input type="text" id="oNome" placeholder="Seu nome completo">
+          </div>
+          <div class="form-group"><label>WhatsApp *</label><input type="tel" id="oTel" placeholder="(11) 99999-9999">
+          </div>
+        </div>
+        <div class="form-group"><label>E-mail</label><input type="email" id="oEmail" placeholder="seu@email.com"></div>
+        <div class="form-group">
+          <label>Prazo desejado</label>
+          <select id="oPrazo">
+            <option value="">Selecione</option>
+            <option>Urgente (até 1 semana)</option>
+            <option>2 semanas</option>
+            <option>1 mês</option>
+            <option>Sem prazo definido</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Descrição do projeto</label><textarea id="oDesc"
+            placeholder="Detalhes, referências, funcionalidades desejadas..."></textarea></div>
+        <div class="modal-nav">
+          <button class="btn-ghost" onclick="goStep(1)"><i class="fas fa-arrow-left"></i> Voltar</button>
+          <button class="btn-primary" onclick="goStep(3)">Revisar <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="orcamento-step" id="step3">
+        <div class="orcamento-summary" id="orcSummary"></div>
+        <div class="modal-nav">
+          <button class="btn-ghost" onclick="goStep(2)"><i class="fas fa-arrow-left"></i> Editar</button>
+          <button class="btn-primary" onclick="sendOrcamento()"><i class="fab fa-whatsapp"></i> Enviar via
+            WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
