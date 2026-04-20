@@ -545,10 +545,9 @@ function escHtml(s) {
   const el = document.getElementById('visitas-num');
   if (!el) return;
   try {
-    const r = await fetch('https://api.counterapi.dev/v1/guimachadodevjs/portfolio/hit');
-    if (!r.ok) throw new Error('status ' + r.status);
+    const r = await fetch('https://hits.sh/guimachadodevjs.github.io.json');
     const d = await r.json();
-    const count = d?.count ?? d?.value ?? null;
+    const count = d?.total ?? null;
     if (count) {
       let start = Math.max(0, count - 40);
       const step = Math.ceil((count - start) / 30);
