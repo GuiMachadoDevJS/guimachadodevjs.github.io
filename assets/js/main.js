@@ -539,30 +539,3 @@ window.calcUpdate = function () {
 function escHtml(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
-
-/* ── CONTADOR DE VISITANTES ── */
-(async function loadVisitas() {
-  const el = document.getElementById('visitas-num');
-  if (!el) return;
-  try {
-    const r = await fetch(
-      'https://api.visitorbadge.io/api/visitors?path=guimachadodevjs.github.io&countColor=%233b82f6',
-      { mode: 'cors' }
-    );
-    const d = await r.json();
-    const count = d?.numberOfVisitors ?? null;
-    if (count) {
-      let start = Math.max(0, count - 40);
-      const step = Math.ceil((count - start) / 30);
-      const t = setInterval(() => {
-        start = Math.min(start + step, count);
-        el.textContent = start.toLocaleString('pt-BR');
-        if (start >= count) clearInterval(t);
-      }, 40);
-    } else {
-      el.textContent = '—';
-    }
-  } catch {
-    el.textContent = '—';
-  }
-})();
