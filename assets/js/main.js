@@ -545,9 +545,12 @@ function escHtml(s) {
   const el = document.getElementById('visitas-num');
   if (!el) return;
   try {
-    const r = await fetch('https://hits.sh/guimachadodevjs.github.io.json');
+    const r = await fetch(
+      'https://api.visitorbadge.io/api/visitors?path=guimachadodevjs.github.io&countColor=%233b82f6',
+      { mode: 'cors' }
+    );
     const d = await r.json();
-    const count = d?.total ?? null;
+    const count = d?.numberOfVisitors ?? null;
     if (count) {
       let start = Math.max(0, count - 40);
       const step = Math.ceil((count - start) / 30);
