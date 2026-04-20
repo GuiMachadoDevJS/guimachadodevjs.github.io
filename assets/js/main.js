@@ -19,6 +19,8 @@ const isTouch = window.matchMedia('(hover:none)').matches;
 if (isTouch) {
   [dot, ring, glow].forEach(el => { if (el) el.style.display = 'none'; });
 } else {
+  ring.style.display = 'none';
+  glow.style.display = 'none';
   let rx = 0, ry = 0;
   document.addEventListener('mousemove', e => {
     dot.style.left = e.clientX + 'px';
