@@ -545,19 +545,20 @@ function escHtml(s) {
   const el = document.getElementById('visitas-num');
   if (!el) return;
   try {
-    // API pública de contador sem necessidade de key
     const r = await fetch('https://api.counterapi.dev/v1/guimachadodevjs/portfolio/hit');
+    if (!r.ok) throw new Error('status ' + r.status);
     const d = await r.json();
-    if (d && d.count) {
-      // anima o número
-      let start = Math.max(0, d.count - 40);
-      const end = d.count;
-      const step = Math.ceil((end - start) / 30);
+    const count = d?.count ?? d?.value ?? null;
+    if (count) {
+      let start = Math.max(0, count - 40);
+      const step = Math.ceil((count - start) / 30);
       const t = setInterval(() => {
-        start = Math.min(start + step, end);
+        start = Math.min(start + step, count);
         el.textContent = start.toLocaleString('pt-BR');
-        if (start >= end) clearInterval(t);
+        if (start >= count) clearInterval(t);
       }, 40);
+    } else {
+      el.textContent = '—';
     }
   } catch {
     el.textContent = '—';
