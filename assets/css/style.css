@@ -397,7 +397,7 @@ body.light .scroll-top{background:rgba(244,246,251,.92)}
   .nav-links{display:none}
   .nav-mobile-btn{display:block}
   .hero-inner{grid-template-columns:1fr;gap:2rem}
-  .hero-right{order:-1}
+  .hero-right{order:1}
   .hero-title{font-size:clamp(2.2rem,6vw,3rem)}
   .sobre-grid{grid-template-columns:1fr;gap:2.5rem}
   .sobre-left{display:flex;justify-content:center}
